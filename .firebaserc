@@ -1,0 +1,14 @@
+{
+  "targets": {
+    "professional-page": {
+      "hosting": {
+        "professionalPage": [
+          "professional-page"
+        ]
+      }
+    }
+  },
+  "projects": {
+    "default": "professional-page"
+  }
+}
