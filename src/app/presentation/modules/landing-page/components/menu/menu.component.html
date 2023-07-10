@@ -1,5 +1,14 @@
 <div class="menu-container">
-  <ng-container *ngFor="let item of items">
-    <button mat-flat-button color="primary">{{item.name}}</button>
+  <ng-container *ngrxLet="menuEntityService.entities$ as menus">
+    <ng-container *ngFor="let item of menus">
+      <button
+        type="button"
+        mat-flat-button
+        color="primary"
+        [routerLink]="[item.path]"
+      >
+        {{ item.name }}
+      </button>
+    </ng-container>
   </ng-container>
 </div>

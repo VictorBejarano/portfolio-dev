@@ -3,9 +3,13 @@
  */
 export interface Menu {
   /**
+   * Codigo.
+   */
+  id: string;
+  /**
    * Ruta del menu.
    */
-  url: string;
+  path: string;
   /**
    * Nombre a mostrar
    */

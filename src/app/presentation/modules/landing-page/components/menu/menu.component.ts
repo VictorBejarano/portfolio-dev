@@ -1,4 +1,7 @@
 import { Component, OnInit } from '@angular/core';
+import { LetDirective, LetModule, PushPipe } from '@ngrx/component';
+import { MenuEntityService } from 'src/app/features/menu';
+import { MenuType } from 'src/app/features/menu/domail/entities/menu-type.model';
 
 @Component({
   selector: 'app-menu',
@@ -8,18 +11,14 @@ import { Component, OnInit } from '@angular/core';
 export class MenuComponent implements OnInit {
   public items: any[];
 
-  constructor() {
-    this.items = [
-      {
-        name: 'BIENVENIDO',
-        path: '',
-      },
-      {
-        name: 'BIENVENIDO2',
-        path: '',
-      },
-    ];
+  constructor(public menuEntityService: MenuEntityService) {
+    this.items = [];
   }
 
-  ngOnInit(): void {}
+  ngOnInit(): void {
+    this.menuEntityService.entities$.subscribe((res) => {
+      console.log('SAT', res);
+    });
+    this.menuEntityService.getWithQuery({ type: MenuType.LANDING });
+  }
 }

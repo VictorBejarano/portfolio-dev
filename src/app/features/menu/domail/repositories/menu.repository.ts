@@ -1,12 +1,12 @@
 import { Observable } from 'rxjs';
 import { Menu } from '../entities/menu.model';
-import { MenuType } from '../entities/menu-type.model';
+import { QueryParams } from '@ngrx/data';
 /**
  * Repositorio de Menu.
  */
 export abstract class MenuRepository {
   /**
-   * Obtiene los menus segun el tipo.
+   * Obtiene los menus segun consulta.
    */
-  abstract getAllMenusByType(type: MenuType): Observable<Menu[]>;
+  public abstract getAllMenusByQuery(queryParams: QueryParams): Observable<Menu[]>;
 }
