@@ -1,0 +1,12 @@
+[
+  {
+    "id": "001",
+    "name": "BIENVENIDO",
+    "path": "/user/bob"
+  },
+  {
+    "id": "002",
+    "name": "BIENVENIDO2",
+    "path": "/user/bob"
+  }
+]

@@ -2,7 +2,7 @@ import { Injectable } from '@angular/core';
 import { Menu } from '../../domail/entities/menu.model';
 import { Observable, of } from 'rxjs';
 import { MenuRepository } from '../../domail/repositories/menu.repository';
-import { QueryParams } from '@ngrx/data';
+import { MenuType } from '../../domail/entities/menu-type.model';
 /**
  * Fuente de datos de Menu.
  */
@@ -13,11 +13,11 @@ export class MenuDataSourceImpl implements MenuRepository {
    */
   public constructor() {}
   /**
-   * Obtiene todos los menus por consulta.
-   * @param queryParams - Parametros de consulta.
+   * Obtiene todos los menus por tipo.
+   * @param type - Tipo de menu.
    * @returns - Observable.
    */
-  public getAllMenusByQuery(queryParams: QueryParams): Observable<Menu[]> {
+  public getAllMenusByType(type: MenuType): Observable<Menu[]> {
     return of([
       {
         id: '001',

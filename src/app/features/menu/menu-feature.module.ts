@@ -9,23 +9,19 @@ import { environment } from 'src/environments/environment';
 import { MenuDataSourceImpl } from './data/datasources/menu-datasource.service';
 import { MenuMockDataSourceImpl } from './data/datasources/menu-mock-datasource.service';
 import { MenuRepository } from './domail/repositories/menu.repository';
-import { GetAllMenusByQueryUsecase } from './domail/usecases/get-all-meny-by-query.usecase';
+import { GetAllMenusByTypeUsecase } from './domail/usecases/get-all-meny-by-type.usecase';
 import { entityConfig } from './infrastructure/entity.metadata';
 import { MenuDataService } from './infrastructure/menu-data.service';
 import { MenuEntityService } from './infrastructure/menu-entity.service';
-import { StoreModule } from '@ngrx/store';
-import { EffectsModule } from '@ngrx/effects';
-
+/**
+ * Modulo de caracteristica menu.
+ */
 @NgModule({
-  declarations: [],
-  imports: [
-    CommonModule,
-    EntityDataModule.forRoot({}),
-  ],
+  imports: [CommonModule, EntityDataModule.forRoot({})],
   providers: [
     MenuDataService,
     MenuEntityService,
-    GetAllMenusByQueryUsecase,
+    GetAllMenusByTypeUsecase,
     {
       provide: MenuRepository,
       useClass: environment.production

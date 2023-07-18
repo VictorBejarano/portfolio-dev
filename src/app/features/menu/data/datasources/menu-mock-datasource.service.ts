@@ -2,7 +2,8 @@ import { Injectable } from '@angular/core';
 import { Menu } from '../../domail/entities/menu.model';
 import { Observable, of } from 'rxjs';
 import { MenuRepository } from '../../domail/repositories/menu.repository';
-import { QueryParams } from '@ngrx/data';
+import { MenuType } from '../../domail/entities/menu-type.model';
+import * as mock from '../mock/menu.mock.json';
 /**
  * Fuente de datos falsos de Menu.
  */
@@ -13,22 +14,11 @@ export class MenuMockDataSourceImpl implements MenuRepository {
    */
   public constructor() {}
   /**
-   * Obtiene todos los menus por consulta.
-   * @param queryParams - Parametros de consulta.
+   * Obtiene todos los menus por tipo.
+   * @param type - Tipo de menu.
    * @returns - Observable.
    */
-  public getAllMenusByQuery(queryParams: QueryParams): Observable<Menu[]> {
-    return of([
-      {
-        id: '001',
-        name: 'BIENVENIDO',
-        path: '/user/bob',
-      },
-      {
-        id: '002',
-        name: 'BIENVENIDO2',
-        path: '/user/bob',
-      },
-    ]);
+  public getAllMenusByType(type: MenuType): Observable<Menu[]> {
+    return of(JSON.parse(JSON.stringify(mock)).default);
   }
 }
