@@ -19,6 +19,10 @@ export class MenuMockDataSourceImpl implements MenuRepository {
    * @returns - Observable.
    */
   public getAllMenusByType(type: MenuType): Observable<Menu[]> {
-    return of(JSON.parse(JSON.stringify(mock)).default);
+    return of(
+      (JSON.parse(JSON.stringify(mock)).default as Array<Menu>).filter(
+        (item) => item.type === type
+      )
+    );
   }
 }

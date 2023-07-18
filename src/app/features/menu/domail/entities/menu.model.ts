@@ -1,3 +1,5 @@
+import { MenuType } from './menu-type.model';
+
 /**
  * Modelo de cada opcion menu.
  */
@@ -14,4 +16,8 @@ export interface Menu {
    * Nombre a mostrar
    */
   name: string;
+  /**
+   * Tipo.
+   */
+  type: MenuType;
 }
