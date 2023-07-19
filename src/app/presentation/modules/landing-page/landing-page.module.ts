@@ -12,11 +12,21 @@ import { MenuFeatureModule } from 'src/app/features/menu/menu-feature.module';
 import { LetDirective, LetModule } from '@ngrx/component';
 import { ButtonLandingMenuComponent } from './components/button-landing-menu/button-landing-menu.component';
 import { WhoIAmComponent } from './pages/who-i-am/who-i-am.component';
+import { NgParticlesModule } from 'ng-particles';
+import { ContainerComponent } from './components/container/container.component';
 
 @NgModule({
-  declarations: [LandingPageComponent, PresentationComponent, MenuComponent, ButtonLandingMenuComponent, WhoIAmComponent],
+  declarations: [
+    LandingPageComponent,
+    PresentationComponent,
+    MenuComponent,
+    ButtonLandingMenuComponent,
+    WhoIAmComponent,
+    ContainerComponent,
+  ],
   imports: [
     CommonModule,
+    NgParticlesModule,
     LetModule,
     MatIconModule,
     MatButtonModule,

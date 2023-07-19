@@ -11,6 +11,8 @@ const routes: Routes = [
     children: [
       {
         path: '',
+        redirectTo: 'welcome',
+        pathMatch: 'full',
       },
       {
         path: 'welcome',

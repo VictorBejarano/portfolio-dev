@@ -11,8 +11,16 @@
     <mat-drawer #drawer class="menu" opened="true" [mode]="mode">
       <app-menu></app-menu>
     </mat-drawer>
-    <div class="example-sidenav-content">
-      <router-outlet></router-outlet>
+    <div class="relative example-sidenav-content">
+      <ng-particles
+        [id]="id"
+        [options]="particlesOptions"
+        [particlesInit]="particlesInit"
+      >
+      </ng-particles>
+      <router-outlet
+        class="absolute top-0 left-0 z-5"
+      ></router-outlet>
     </div>
   </mat-drawer-container>
 </div>
