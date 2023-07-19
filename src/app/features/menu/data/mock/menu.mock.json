@@ -2,13 +2,13 @@
   {
     "id": "001",
     "name": "BIENVENIDO",
-    "path": "/user/bob",
+    "path": "/welcome",
     "type": "landing"
   },
   {
     "id": "002",
     "name": "BIENVENIDO2",
-    "path": "/user/bob",
+    "path": "/who-i-am",
     "type": "landing"
   }
 ]

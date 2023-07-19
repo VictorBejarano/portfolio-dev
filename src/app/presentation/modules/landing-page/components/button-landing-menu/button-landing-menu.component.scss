@@ -1,0 +1,20 @@
+.button-menu {
+  width: 100%;
+  color: rgba(255, 255, 255, 0.35);
+  padding: 15px 0;
+  text-align: end;
+}
+.button-menu:hover {
+  color: rgba(255, 255, 255, 0.75);
+}
+a {
+  text-decoration: none;
+  text-transform: uppercase;
+  font-size: 1em;
+  letter-spacing: 0.25em;
+  line-height: 1.75;
+}
+.activo {
+  border-bottom: 2px solid;
+  border-image: linear-gradient(to right, #051a59, #1473e6) 1;
+}

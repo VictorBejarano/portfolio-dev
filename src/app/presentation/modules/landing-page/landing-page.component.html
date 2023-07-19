@@ -1,15 +1,18 @@
 <div class="main-screen">
-  <button *ngIf="isButtonMenuEnable" class="absolute left-0 z-5 m-2 circular-button" (click)="drawer.toggle()">
+  <button
+    type="button"
+    *ngIf="isButtonMenuEnable"
+    class="absolute left-0 z-5 m-2 circular-button"
+    (click)="drawer.toggle()"
+  >
     <mat-icon>menu</mat-icon>
   </button>
   <mat-drawer-container autosize>
     <mat-drawer #drawer class="menu" opened="true" [mode]="mode">
       <app-menu></app-menu>
     </mat-drawer>
-
     <div class="example-sidenav-content">
       <router-outlet></router-outlet>
-      <pre>{{platform | json }}</pre>
     </div>
   </mat-drawer-container>
 </div>
