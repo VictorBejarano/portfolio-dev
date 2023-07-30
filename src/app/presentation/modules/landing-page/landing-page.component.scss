@@ -43,3 +43,7 @@ ng-particles {
   left: 0;
   z-index: -1; /* Asigna un valor negativo para colocarlo en el fondo */
 }
+
+::ng-deep .main-screen .mat-drawer-content {
+  overflow: hidden !important;
+}

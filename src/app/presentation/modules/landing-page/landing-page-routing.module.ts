@@ -17,10 +17,12 @@ const routes: Routes = [
       {
         path: 'welcome',
         component: PresentationComponent,
+        data: { animation: 'Welcome' },
       },
       {
         path: 'who-i-am',
         component: WhoIAmComponent,
+        data: { animation: 'WhoIAm' },
       },
     ],
   },

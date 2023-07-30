@@ -9,7 +9,7 @@ import { MatIconModule } from '@angular/material/icon';
 import { MatButtonModule } from '@angular/material/button';
 import { MenuComponent } from './components/menu/menu.component';
 import { MenuFeatureModule } from 'src/app/features/menu/menu-feature.module';
-import { LetDirective, LetModule } from '@ngrx/component';
+import { LetModule } from '@ngrx/component';
 import { ButtonLandingMenuComponent } from './components/button-landing-menu/button-landing-menu.component';
 import { WhoIAmComponent } from './pages/who-i-am/who-i-am.component';
 import { NgParticlesModule } from 'ng-particles';

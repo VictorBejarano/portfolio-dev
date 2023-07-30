@@ -3,12 +3,14 @@
     "id": "001",
     "name": "BIENVENIDO",
     "path": "/welcome",
-    "type": "landing"
+    "type": "landing",
+    "lng": "es"
   },
   {
     "id": "002",
-    "name": "BIENVENIDO2",
+    "name": "QUIEN SOY",
     "path": "/who-i-am",
-    "type": "landing"
+    "type": "landing",
+    "lng": "es"
   }
 ]

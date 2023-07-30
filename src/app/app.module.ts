@@ -17,7 +17,12 @@ import {
 } from '@angular/fire/analytics';
 import { provideAuth, getAuth } from '@angular/fire/auth';
 import { provideDatabase, getDatabase } from '@angular/fire/database';
-import { provideFirestore, getFirestore, connectFirestoreEmulator, enableMultiTabIndexedDbPersistence } from '@angular/fire/firestore';
+import {
+  provideFirestore,
+  getFirestore,
+  connectFirestoreEmulator,
+  enableMultiTabIndexedDbPersistence,
+} from '@angular/fire/firestore';
 import { provideFunctions, getFunctions } from '@angular/fire/functions';
 import { provideMessaging, getMessaging } from '@angular/fire/messaging';
 import { providePerformance, getPerformance } from '@angular/fire/performance';
@@ -26,7 +31,7 @@ import {
   getRemoteConfig,
 } from '@angular/fire/remote-config';
 import { provideStorage, getStorage } from '@angular/fire/storage';
-import { HttpClientModule } from '@angular/common/http';
+import { HttpClient, HttpClientModule } from '@angular/common/http';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { AngularFireModule } from '@angular/fire/compat';
 import { AngularFirestoreModule } from '@angular/fire/compat/firestore';
@@ -53,7 +58,7 @@ import { EmulatorConfig } from '@angular/fire/auth';
     provideFirestore(() => {
       const firestore = getFirestore();
       if (environment.useEmulators) {
-          connectFirestoreEmulator(firestore, 'localhost', 8080);
+        connectFirestoreEmulator(firestore, 'localhost', 8080);
       }
       return firestore;
     }),

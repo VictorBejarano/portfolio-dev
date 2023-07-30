@@ -11,7 +11,7 @@
     <mat-drawer #drawer class="menu" opened="true" [mode]="mode">
       <app-menu></app-menu>
     </mat-drawer>
-    <div class="relative example-sidenav-content">
+    <div class="relative h-full" [@routeAnimations]="getRouteAnimationData()">
       <ng-particles
         [id]="id"
         [options]="particlesOptions"

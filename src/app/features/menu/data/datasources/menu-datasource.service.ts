@@ -27,7 +27,15 @@ export class MenuDataSourceImpl implements MenuRepository {
    */
   public getAllMenusByType(type: MenuType): Observable<Menu[]> {
     return collectionData(
-      query(collection(this.firestore, 'menus'), where('type', '==', type))
+      query(
+        collection(this.firestore, 'menus'),
+        where(
+          'lng',
+          '==',
+          navigator.language.split('-')[0] === 'en' ? 'es' : 'en'
+        ),
+        where('type', '==', type)
+      )
     ) as Observable<Menu[]>;
   }
 }
