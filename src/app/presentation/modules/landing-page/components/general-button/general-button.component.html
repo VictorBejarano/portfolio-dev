@@ -1,0 +1,15 @@
+<button
+  type="button"
+  class="btn uppercase flex align-items-center text-bluegray-50 font-bold"
+  (click)="(true)"
+>
+  <fa-icon
+    *ngIf="type === 'fw' && iconFW"
+    class="icon"
+    [icon]="iconFW"
+  ></fa-icon>
+  <mat-icon *ngIf="type === 'material' && iconM">{{ iconM }}</mat-icon>
+  <div *ngIf="title">
+    {{ title }}
+  </div>
+</button>

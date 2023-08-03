@@ -2,7 +2,7 @@ import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
 import { PresentationComponent } from './pages/presentation/presentation.component';
 import { LandingPageComponent } from './landing-page.component';
-import { WhoIAmComponent } from './pages/who-i-am/who-i-am.component';
+import { AboutComponent } from './pages/about/about.component';
 
 const routes: Routes = [
   {
@@ -11,18 +11,18 @@ const routes: Routes = [
     children: [
       {
         path: '',
-        redirectTo: 'welcome',
+        redirectTo: 'home',
         pathMatch: 'full',
       },
       {
-        path: 'welcome',
+        path: 'home',
         component: PresentationComponent,
-        data: { animation: 'Welcome' },
+        data: { animation: 'home' },
       },
       {
-        path: 'who-i-am',
-        component: WhoIAmComponent,
-        data: { animation: 'WhoIAm' },
+        path: 'about',
+        component: AboutComponent,
+        data: { animation: 'about' },
       },
     ],
   },

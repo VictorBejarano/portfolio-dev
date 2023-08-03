@@ -1,15 +1,15 @@
 [
   {
     "id": "001",
-    "name": "BIENVENIDO",
-    "path": "/welcome",
+    "name": "Inicio",
+    "path": "/home",
     "type": "landing",
     "lng": "es"
   },
   {
     "id": "002",
-    "name": "QUIEN SOY",
-    "path": "/who-i-am",
+    "name": "Sobre mi",
+    "path": "/about",
     "type": "landing",
     "lng": "es"
   }

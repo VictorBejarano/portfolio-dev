@@ -1,0 +1,36 @@
+.round-border {
+  border-radius: 12rem 0.75rem 0.75rem;
+}
+.profile-container {
+  height: 35rem;
+}
+.info-container {
+  display: grid;
+  grid-template-columns: repeat(2, auto);
+  align-items: center;
+  align-content: center;
+  gap: 1rem;
+}
+
+.info-container p {
+  margin: 0px;
+}
+.title-container {
+  display: grid;
+  justify-content: end;
+  justify-items: end;
+  row-gap: 1rem;
+}
+
+@media only screen and (max-width: 1360px) {
+  .title-container {
+    margin-top: 20rem;
+    display: grid;
+    justify-content: center;
+    justify-items: center;
+    row-gap: 1.25rem;
+  }
+  .info-container {
+    margin-bottom: 20rem;
+  }
+}

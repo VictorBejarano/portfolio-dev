@@ -36,6 +36,16 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { AngularFireModule } from '@angular/fire/compat';
 import { AngularFirestoreModule } from '@angular/fire/compat/firestore';
 import { EmulatorConfig } from '@angular/fire/auth';
+import {
+  FaIconLibrary,
+  FontAwesomeModule,
+} from '@fortawesome/angular-fontawesome';
+import { faDownload } from '@fortawesome/free-solid-svg-icons';
+import {
+  faWhatsapp,
+  faGithub,
+  faLinkedin,
+} from '@fortawesome/free-brands-svg-icons';
 
 @NgModule({
   declarations: [AppComponent],
@@ -46,6 +56,7 @@ import { EmulatorConfig } from '@angular/fire/auth';
     HttpClientModule,
     StoreModule.forRoot({}, {}),
     EffectsModule.forRoot([]),
+    FontAwesomeModule,
     StoreRouterConnectingModule.forRoot(),
     StoreDevtoolsModule.instrument({
       maxAge: 25,
@@ -71,4 +82,8 @@ import { EmulatorConfig } from '@angular/fire/auth';
   providers: [ScreenTrackingService, UserTrackingService],
   bootstrap: [AppComponent],
 })
-export class AppModule {}
+export class AppModule {
+  constructor(library: FaIconLibrary) {
+    library.addIcons(faDownload, faWhatsapp, faGithub, faLinkedin);
+  }
+}

@@ -1,0 +1,14 @@
+<div class="border-circle bg-primary-900 w-2rem h-2rem">
+  <div *ngIf="type === 'fw' && iconFW" class="flex justify-content-center align-items-center w-2rem h-2rem">
+    <fa-icon
+      class="text-bluegray-50"
+      [icon]="iconFW"
+    ></fa-icon>
+  </div>
+  <mat-icon
+    *ngIf="type === 'material' && iconM"
+    class="ml-1 w-2rem mt-1 h-2rem text-bluegray-50"
+  >
+    {{ iconM }}
+  </mat-icon>
+</div>

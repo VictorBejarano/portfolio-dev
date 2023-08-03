@@ -7,13 +7,17 @@ import { PresentationComponent } from './pages/presentation/presentation.compone
 import { MatSidenavModule } from '@angular/material/sidenav';
 import { MatIconModule } from '@angular/material/icon';
 import { MatButtonModule } from '@angular/material/button';
+import { MatDividerModule } from '@angular/material/divider';
 import { MenuComponent } from './components/menu/menu.component';
 import { MenuFeatureModule } from 'src/app/features/menu/menu-feature.module';
 import { LetModule } from '@ngrx/component';
 import { ButtonLandingMenuComponent } from './components/button-landing-menu/button-landing-menu.component';
-import { WhoIAmComponent } from './pages/who-i-am/who-i-am.component';
+import { AboutComponent } from './pages/about/about.component';
 import { NgParticlesModule } from 'ng-particles';
 import { ContainerComponent } from './components/container/container.component';
+import { IconComponent } from './components/icon/icon.component';
+import { GeneralButtonComponent } from './components/general-button/general-button.component';
+import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
 
 @NgModule({
   declarations: [
@@ -21,8 +25,10 @@ import { ContainerComponent } from './components/container/container.component';
     PresentationComponent,
     MenuComponent,
     ButtonLandingMenuComponent,
-    WhoIAmComponent,
+    AboutComponent,
     ContainerComponent,
+    IconComponent,
+    GeneralButtonComponent,
   ],
   imports: [
     CommonModule,
@@ -31,7 +37,9 @@ import { ContainerComponent } from './components/container/container.component';
     MatIconModule,
     MatButtonModule,
     MatSidenavModule,
+    MatDividerModule,
     MenuFeatureModule,
+    FontAwesomeModule,
     LandingPageRoutingModule,
   ],
 })
