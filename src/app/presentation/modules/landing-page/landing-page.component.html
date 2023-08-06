@@ -1,14 +1,14 @@
 <div class="main-screen">
   <button
     type="button"
-    *ngIf="isButtonMenuEnable"
+    *ngIf="menuHideQuery.matches"
     class="absolute left-0 z-5 m-2 circular-button"
     (click)="drawer.toggle()"
   >
     <mat-icon>menu</mat-icon>
   </button>
   <mat-drawer-container autosize>
-    <mat-drawer #drawer class="menu" opened="true" [mode]="mode">
+    <mat-drawer #drawer class="menu" opened="true" [mode]="menuHideQuery.matches ? 'over' : 'side'">
       <app-menu></app-menu>
     </mat-drawer>
     <div class="relative h-full" [@routeAnimations]="getRouteAnimationData()">

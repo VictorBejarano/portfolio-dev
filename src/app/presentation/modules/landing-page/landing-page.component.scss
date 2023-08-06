@@ -47,3 +47,10 @@ ng-particles {
 ::ng-deep .main-screen .mat-drawer-content {
   overflow: hidden !important;
 }
+
+@media only screen and (max-width: 1360px) {
+  .menu {
+    width: 240px;
+    border: 0;
+  }
+}

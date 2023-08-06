@@ -1,64 +1,70 @@
 <app-container>
-  <div class="title-container ml-4">
-    <div>
-      <h1
-        class="text-7xl font-semibold text-bluegray-100 text-right text-overflow-ellipsis uppercase w-auto"
-      >
-        Victor Bejarano
-      </h1>
-      <h3
-        class="text-4xl font-normal text-bluegray-300 text-right text-overflow-ellipsis uppercase w-auto"
-      >
-        Desarrollador Software
-      </h3>
-    </div>
-    <app-general-button
-    class="w-auto"
-      type="fw"
-      [iconFW]="['fas', 'download']"
-      title="DESCARGAR CV"
-    ></app-general-button>
-    <div class="flex w-auto gap-2 flex-row align-content-center align-items-center">
-      <p class="uppercase m-0 font-semibold text-base text-bluegray-100">S&iacute;gueme:</p>
-      <app-general-button
-        type="fw"
-        [iconFW]="['fab', 'github']"
-      ></app-general-button>
-      <app-general-button
-        type="fw"
-        [iconFW]="['fab', 'linkedin']"
-      ></app-general-button>
-    </div>
-  </div>
-  <div class="profile-container relative w-24rem mr-4">
-    <div
-      class="absolute w-full h-full bg-bluegray-100 text-bluegray-900 round-border opacity-80"
-    ></div>
-    <div
-      class="absolute flex flex-column justify-content-center align-content-center align-items-center w-full"
-    >
-      <div
-        class="h-24rem flex flex-column justify-content-center align-content-center align-items-center"
-      >
-        <img
-          class="border-circle w-20rem h-20rem shadow-5 opacity-100"
-          src="https://media.licdn.com/dms/image/C4E03AQGLvaXqVt02_Q/profile-displayphoto-shrink_800_800/0/1609718479335?e=1695254400&v=beta&t=RpxBTMRtbq_EQz75ynUDyNFCl88YyUYPQsTYB3LXV7Y"
-          alt="profile"
-        />
+  <div class="main">
+    <div class="title-container ml-4">
+      <div>
+        <h1
+          class="text-7xl font-semibold text-bluegray-100 text-right text-overflow-ellipsis uppercase w-auto"
+        >
+          Victor Bejarano
+        </h1>
+        <h3
+          class="text-4xl font-normal text-bluegray-300 text-right text-overflow-ellipsis uppercase w-auto"
+        >
+          Desarrollador Software
+        </h3>
       </div>
-      <div class="info-container text-xl line-height-2">
-        <app-icon type="fw" [iconFW]="['fab', 'whatsapp']"></app-icon>
-        <a class="no-underline text-bluegray-900" href="tel:+573005103250"
-          >+57 300 5103250</a
+      <app-general-button
+        class="w-auto"
+        type="fw"
+        [iconFW]="['fas', 'download']"
+        title="DESCARGAR CV"
+      ></app-general-button>
+      <div
+        class="flex w-auto gap-2 flex-row align-content-center align-items-center"
+      >
+        <p class="uppercase m-0 font-semibold text-base text-bluegray-100">
+          S&iacute;gueme:
+        </p>
+        <app-general-button
+          type="fw"
+          [iconFW]="['fab', 'github']"
+        ></app-general-button>
+        <app-general-button
+          type="fw"
+          [iconFW]="['fab', 'linkedin']"
+        ></app-general-button>
+      </div>
+    </div>
+    <div class="profile-container relative w-24rem mr-4">
+      <div
+        class="absolute w-full h-full bg-bluegray-100 text-bluegray-900 round-border opacity-80"
+      ></div>
+      <div
+        class="absolute flex flex-column justify-content-center align-content-center align-items-center w-full"
+      >
+        <div
+          class="h-24rem flex flex-column justify-content-center align-content-center align-items-center"
         >
-        <app-icon type="material" iconM="mail"></app-icon>
-        <a
-          class="no-underline text-bluegray-900"
-          href="mailto:alejandrobjrn4@gmail.com?subject=Solicitud%20de%20Servicios%20de%20Desarrollo%20de%20Software&body=Hola,%20Quisiera%20saber%20más%20sobre%20los%20servicios%20que%20ofrece"
-          >alejandrobjrn4@gmail.com</a
-        >
-        <app-icon type="material" iconM="location_on"></app-icon>
-        <p>Bogotá, Colombia</p>
+          <img
+            class="border-circle w-20rem h-20rem shadow-5 opacity-100"
+            src="https://media.licdn.com/dms/image/C4E03AQGLvaXqVt02_Q/profile-displayphoto-shrink_800_800/0/1609718479335?e=1695254400&v=beta&t=RpxBTMRtbq_EQz75ynUDyNFCl88YyUYPQsTYB3LXV7Y"
+            alt="profile"
+          />
+        </div>
+        <div class="info-container text-xl line-height-2">
+          <app-icon type="fw" [iconFW]="['fab', 'whatsapp']"></app-icon>
+          <a class="no-underline text-bluegray-900" href="tel:+573005103250"
+            >+57 300 5103250</a
+          >
+          <app-icon type="material" iconM="mail"></app-icon>
+          <a
+            class="no-underline text-bluegray-900"
+            href="mailto:alejandrobjrn4@gmail.com?subject=Solicitud%20de%20Servicios%20de%20Desarrollo%20de%20Software&body=Hola,%20Quisiera%20saber%20más%20sobre%20los%20servicios%20que%20ofrece"
+            >alejandrobjrn4@gmail.com</a
+          >
+          <app-icon type="material" iconM="location_on"></app-icon>
+          <p>Bogotá, Colombia</p>
+        </div>
       </div>
     </div>
   </div>

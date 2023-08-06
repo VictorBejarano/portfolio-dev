@@ -8,6 +8,7 @@ import * as particlesConfig from 'src/app/configs/particles.config.json';
 import { ChildrenOutletContexts, RouterOutlet } from '@angular/router';
 import { slideInAnimation } from './animations';
 import { heroAnimation } from './animations/hero-animations';
+import {MediaMatcher} from '@angular/cdk/layout';
 
 @Component({
   templateUrl: './landing-page.component.html',
@@ -18,20 +19,18 @@ import { heroAnimation } from './animations/hero-animations';
   ],
 })
 export class LandingPageComponent implements OnInit {
+  menuHideQuery: MediaQueryList;
   id = 'backgroud_particles';
-  public isButtonMenuEnable: boolean;
-  public mode: MatDrawerMode;
   particlesOptions: IParticlesProps;
   constructor(
-    public platform: Platform,
-    private contexts: ChildrenOutletContexts
+    private contexts: ChildrenOutletContexts,
+    media: MediaMatcher
   ) {
+    this.menuHideQuery = media.matchMedia('(max-width: 1154px)');
     this.particlesOptions = JSON.parse(JSON.stringify(particlesConfig)).default;
-    this.isButtonMenuEnable = this.platform.ANDROID || this.platform.IOS;
-    this.mode = this.isButtonMenuEnable ? 'over' : 'side';
   }
   ngOnInit(): void {
-    this.platform;
+
     console.log();
   }
   async particlesInit(engine: Engine): Promise<void> {
