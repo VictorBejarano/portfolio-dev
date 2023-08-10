@@ -3,7 +3,7 @@ import { CommonModule } from '@angular/common';
 
 import { LandingPageRoutingModule } from './landing-page-routing.module';
 import { LandingPageComponent } from './landing-page.component';
-import { PresentationComponent } from './pages/presentation/presentation.component';
+import { HomeComponent } from './pages/home/home.component';
 import { MatSidenavModule } from '@angular/material/sidenav';
 import { MatIconModule } from '@angular/material/icon';
 import { MatButtonModule } from '@angular/material/button';
@@ -22,7 +22,7 @@ import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
 @NgModule({
   declarations: [
     LandingPageComponent,
-    PresentationComponent,
+    HomeComponent,
     MenuComponent,
     ButtonLandingMenuComponent,
     AboutComponent,

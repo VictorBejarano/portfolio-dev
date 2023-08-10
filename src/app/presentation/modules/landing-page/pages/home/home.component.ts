@@ -2,10 +2,10 @@ import { Component, OnInit } from '@angular/core';
 import { heroAnimation } from '../../animations/hero-animations';
 
 @Component({
-  templateUrl: './presentation.component.html',
-  styleUrls: ['./presentation.component.scss'],
+  templateUrl: './home.component.html',
+  styleUrls: ['./home.component.scss'],
 })
-export class PresentationComponent implements OnInit {
+export class HomeComponent implements OnInit {
 
   constructor() { }
 

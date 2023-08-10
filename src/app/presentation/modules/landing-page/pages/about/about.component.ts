@@ -1,11 +1,12 @@
-import {
-  Component,
-} from '@angular/core';
+import { Component } from '@angular/core';
 
 @Component({
   templateUrl: './about.component.html',
   styleUrls: ['./about.component.scss'],
 })
 export class AboutComponent {
-  constructor() {}
+  logos: string[];
+  constructor() {
+    this.logos = ['angular', 'ngrx', 'nx', 'firebase', 'flutter'];
+  }
 }
