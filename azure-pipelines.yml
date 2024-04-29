@@ -25,14 +25,13 @@ steps:
   displayName: Setup Node.js
 
 - script: |
-    nx workspace-generator@18.3.4
+    npm install
   displayName: Install Nx dependencies
 
 - script: |
-    nx build my-app --prod
+    nx build portfolio --prod
   displayName: Build Angular application
   
 - script: |
-    npx ng build --prod my-app --output-path dist/my-app
-    git push origin gh-pages --force --branch=gh-pages dist/my-app
+    git push origin gh-pages --force --branch=gh-pages dist/apps/portfolio
   displayName: Publish to Github Pages
