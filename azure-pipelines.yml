@@ -11,6 +11,10 @@ pool:
 
 steps:
 - script: |
+    git config --global user.email "azure.devops@azure.com"
+    git config --global user.name "Azure DevOps"
+    git config --global credential.helper 'store --stdin'
+    git remote set-url origin https://$(GITHUB_PAT)@github.com/VictorBejarano/victorbejarano.github.io.git
     git checkout .
     git fetch origin
     git checkout master
@@ -25,14 +29,20 @@ steps:
   displayName: Setup Node.js
 
 - script: |
-    nx workspace-generator@18.3.4
+    npm install
   displayName: Install Nx dependencies
 
 - script: |
-    nx build my-app --prod
+    nx build portfolio --prod
   displayName: Build Angular application
   
 - script: |
-    npx ng build --prod my-app --output-path dist/my-app
-    git push origin gh-pages --force --branch=gh-pages dist/my-app
+    git checkout gh-pages
+    rm -r ./docs
+    mkdir docs
+    mv ./dist/apps/portfolio/browser/* ./docs
+    git add ./docs
+    git status
+    git commit -m "Despliege Azure"
+    git push origin gh-pages --force
   displayName: Publish to Github Pages
