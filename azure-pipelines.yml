@@ -4,16 +4,35 @@
 # https://aka.ms/yaml
 
 trigger:
-- main
+- master
 
 pool:
   vmImage: ubuntu-latest
 
 steps:
-- script: echo Hello, world!
-  displayName: 'Run a one-line script'
+- script: |
+    git checkout .
+    git fetch origin
+    git checkout master
+  displayName: Checkout repository
 
 - script: |
-    echo Add other tasks to build, test, and deploy your project.
-    echo See https://aka.ms/yaml
-  displayName: 'Run a multi-line script'
+    curl -sL https://deb.nodesource.com/setup_20.x | bash -s
+    sudo apt-get install -y nodejs
+    sudo npm install -g nx@18.3.4
+    node -v
+    npm -v
+  displayName: Setup Node.js
+
+- script: |
+    nx workspace-generator@18.3.4
+  displayName: Install Nx dependencies
+
+- script: |
+    nx build my-app --prod
+  displayName: Build Angular application
+  
+- script: |
+    npx ng build --prod my-app --output-path dist/my-app
+    git push origin gh-pages --force --branch=gh-pages dist/my-app
+  displayName: Publish to Github Pages
