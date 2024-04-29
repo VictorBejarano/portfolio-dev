@@ -11,6 +11,8 @@ pool:
 
 steps:
 - script: |
+    git config --global user.email "azure.devops@azure.com"
+    git config --global user.name "Azure DevOps"
     git config --global credential.helper 'store --stdin'
     echo $(GITHUB_PAT) | git credential-fill
     git checkout .
