@@ -33,5 +33,11 @@ steps:
   displayName: Build Angular application
   
 - script: |
-    git push origin gh-pages --force --branch=gh-pages dist/apps/portfolio
+    git checkout gh-pages
+    mkdir docs
+    mv ./dist/apps/portfolio/browser/* ./docs
+    git add ./docs
+    git status
+    git commit -m "Despliege Azure"
+    git push origin gh-pages
   displayName: Publish to Github Pages
