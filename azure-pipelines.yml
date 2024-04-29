@@ -42,5 +42,5 @@ steps:
     git add ./docs
     git status
     git commit -m "Despliege Azure"
-    git push origin gh-pages
+    git push origin gh-pages --force
   displayName: Publish to Github Pages
